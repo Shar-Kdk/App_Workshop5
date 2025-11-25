@@ -11,6 +11,14 @@
             acc.Withdraw(300);
             Console.WriteLine("Balance: " + acc.Balance);
             Console.WriteLine();
+
+            Console.WriteLine("\n=== TASK 2 ===");
+            Car car = new Car { Brand = "Toyota", Speed = 120, Seats = 4 };
+            Motorcycle moto = new Motorcycle { Brand = "Yamaha", Speed = 90, HasCarrier = true };
+            Console.WriteLine("\nCar Information:");
+            car.DisplayInfo();
+            Console.WriteLine("\nMotorcycle Information:");
+            moto.DisplayInfo();
         }
     }
 }
