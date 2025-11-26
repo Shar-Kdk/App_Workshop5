@@ -23,7 +23,7 @@ namespace App_Workshop5
             moto.DisplayInfo();
             Console.WriteLine();
 
-            Console.WriteLine("\n=== TASK 3 (Overloading - Printer Class) ===");
+            Console.WriteLine("\n======== TASK 3 (Overloading - Printer Class) ========");
 
             Printer printer = new Printer();
 
@@ -32,7 +32,7 @@ namespace App_Workshop5
             printer.Print("Repeated Output", 3);
             Console.WriteLine();
 
-            Console.WriteLine("\n=== TASK 3 (Inheritance + Polymorphism - Teacher) ===");
+            Console.WriteLine("\n======== TASK 3 (Inheritance + Polymorphism - Teacher) ========");
 
             NepaliTeacher nepali = new NepaliTeacher();
             nepali.Name = "Mr. Sharma";
@@ -41,10 +41,28 @@ namespace App_Workshop5
             english.Name = "Mrs. Allen";
 
             nepali.Teaching();     // overridden method
-            nepali.SalaryInfo();   // sealed method
+            nepali.SalaryInfo();   // sealed 
+            Console.WriteLine();
 
             english.Teaching();    // base method
             english.SalaryInfo();  // sealed method
+            Console.WriteLine();
+
+            Console.WriteLine("\n======== TASK 4 (Abstraction - AbsVehicle) ========");
+
+            AbsVehicle carObj = new AbsCar();
+            AbsVehicle bikeObj = new AbsBike();
+
+            carObj.Display();
+            carObj.StartEngine();
+            carObj.StopEngine();
+
+            Console.WriteLine();
+
+            bikeObj.Display();
+            bikeObj.StartEngine();
+            bikeObj.StopEngine();
+
             Console.WriteLine();
         }
     }
