@@ -8,10 +8,14 @@ namespace App_Workshop5
         {
             Console.WriteLine("======== TASK 1 ========");
             BankAccount acc = new BankAccount("12345", 1000);
-            Console.WriteLine("Account: " + acc.AccountNumber);
+
+            Console.WriteLine("Account Number: " + acc.AccountNumber);
+
             acc.Deposit(500);
             acc.Withdraw(300);
-            Console.WriteLine("Balance: " + acc.Balance);
+
+            Console.WriteLine("Final Balance: " + acc.Balance);
+
             Console.WriteLine();
 
             Console.WriteLine("\n======== TASK 2 ========");
@@ -64,6 +68,12 @@ namespace App_Workshop5
             bikeObj.StopEngine();
 
             Console.WriteLine();
+
+            Console.WriteLine("\n======== TASK 5 ========");
+            ElectronicsStore store = new ElectronicsStore();
+            store.AddDevice(new Laptop("Dell", 1200));
+            store.AddDevice(new Smartphone("Samsung", 900));
+            store.ShowAllDeviceDetails();
         }
     }
 }

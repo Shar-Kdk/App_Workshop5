@@ -34,14 +34,32 @@ namespace App_Workshop5
 
         public void Deposit(double amount)
         {
-            if (amount > 0)
-                balance += amount;
+            if (amount <= 0)
+            {
+                Console.WriteLine($"Invalid deposit amount: {amount}");
+                return;
+            }
+
+            balance += amount;
+            Console.WriteLine($"Deposited: {amount}. New balance: {balance}");
         }
 
         public void Withdraw(double amount)
         {
-            if (amount > 0 && amount <= balance)
-                balance -= amount;
+            if (amount <= 0)
+            {
+                Console.WriteLine($"Invalid withdrawal amount: {amount}");
+                return;
+            }
+
+            if (amount > balance)
+            {
+                Console.WriteLine($"Withdrawal failed. Tried to withdraw: {amount}, Available: {balance}");
+                return;
+            }
+
+            balance -= amount;
+            Console.WriteLine($"Withdrawn: {amount}. Remaining balance: {balance}");
         }
     }
 }
